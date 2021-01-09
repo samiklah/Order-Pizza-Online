@@ -4,7 +4,7 @@
     
 <div class="wrapper create-pizza">
     <h1>Create a new pizza</h1>
-    <form action="/pizzas" method="post">
+    <form action="{{ route('store') }}" method="post">
         @csrf
         <div class="input-group mb-3">
         <div class="input-group-prepend">
@@ -17,7 +17,7 @@
         <div class="input-group-prepend">
             <label class="input-group-text" for="inputGroupSelect01">Choose pizza type</label>
         </div>
-        <select class="custom-select" id="inputGroupSelect01">
+        <select name="type" class="custom-select" id="inputGroupSelect01">
             <option selected>Choose...</option>
             <option value="cheese">Cheese</option>
             <option value="hawaiian">Hawaiian</option>
@@ -30,7 +30,7 @@
         <div class="input-group-prepend">
             <label class="input-group-text" for="inputGroupSelect01">Choose pizza base</label>
         </div>
-        <select class="custom-select" id="inputGroupSelect01">
+        <select name="base" class="custom-select" id="inputGroupSelect01">
             <option selected>Choose...</option>
             <option value="cheese">Cheese</option>
             <option value="hawaiian">Hawaiian</option>
