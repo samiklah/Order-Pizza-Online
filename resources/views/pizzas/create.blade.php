@@ -4,20 +4,29 @@
     
 <div class="wrapper create-pizza">
     <h1>Create a new pizza</h1>
+    
+    <br>
     <form action="{{ route('store') }}" method="post">
         @csrf
         <div class="input-group mb-3">
         <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon3">Your Phone Number:</span>
+        </div>
+        <input type="text" name="number" class="form-control" id="basic-url" aria-describedby="basic-addon3" required>
+        </div>
+
+        <div class="input-group mb-3">
+        <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon3">Your name:</span>
         </div>
-        <input type="text" name="name" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+        <input type="text" name="name" class="form-control" id="basic-url" aria-describedby="basic-addon3" required>
         </div>
         
         <div class="input-group mb-3">
         <div class="input-group-prepend">
             <label class="input-group-text" for="inputGroupSelect01">Choose pizza type</label>
         </div>
-        <select name="type" class="custom-select" id="inputGroupSelect01">
+        <select name="type" class="custom-select" id="inputGroupSelect01" required>
             <option selected>Choose...</option>
             <option value="cheese">Cheese</option>
             <option value="hawaiian">Hawaiian</option>
@@ -30,7 +39,7 @@
         <div class="input-group-prepend">
             <label class="input-group-text" for="inputGroupSelect01">Choose pizza base</label>
         </div>
-        <select name="base" class="custom-select" id="inputGroupSelect01">
+        <select name="base" class="custom-select" id="inputGroupSelect01" required>
             <option selected>Choose...</option>
             <option value="cheese">Cheese</option>
             <option value="hawaiian">Hawaiian</option>

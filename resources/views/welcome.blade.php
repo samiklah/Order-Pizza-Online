@@ -10,6 +10,8 @@
             @else
                 <a href="{{ route('login') }}">Login</a>
 
+                <br>
+
                 @if (Route::has('register'))
                     <a href="{{ route('register') }}">Register</a>
                 @endif
@@ -18,12 +20,8 @@
     @endif
 
     <div class="content">
-        <img src="/images/pizza-house.png" alt="">
-        <div class="title m-b-md">
-            Dhaka's best pizza 
-        </div>
         <p class="message">{{ session('message') }}</p>
-        <a href="/pizza1/public/pizzas/create">Order a Pizza</a>
+        <a href="{{url('/pizzas/create') }}">Order a Pizza</a>
         
     </div>
 </div>

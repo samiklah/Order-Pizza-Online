@@ -21,9 +21,20 @@ class PizzaController extends Controller {
         return view('pizzas.create');
     }
 
-    public function store() {
+    public function store(Request $request) {
+
+        $this->validate($request, [
+            'name' => 'required',
+            'number' => 'required|integer',
+            'type' => 'required',
+            'base' => 'required',
+            'toppings' => 'required'
+        ]
+      );
+
         $pizza = new Pizza();
         $pizza->name        = request('name');
+        $pizza->phone_number= request('number');
         $pizza->type        = request('type');
         $pizza->base        = request('base');
         $pizza->toppings    = request('toppings');

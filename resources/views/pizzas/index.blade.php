@@ -6,12 +6,16 @@
         @foreach ($pizzas as $pizza)
             <div class="pizza-item">
                 <img src="/images/pizza.png" alt="">
-                <h4><a href="/pizzas/{{$pizza->id}}">{{ $pizza->name }}</a></h4>
+                <h4><a href="{{url('/pizzas/'.$pizza->id) }}">{{ $pizza->name }}</a></h4>
             </div>  
         @endforeach
-    </div> 
 
-      
-    
+        <br>
+        
+        <a href="{{url('/pizzas/create') }}">
+        <button class="btn btn-primary"> Order Pizza </button>
+        
+        </a>
+    </div> 
 
 @endsection
