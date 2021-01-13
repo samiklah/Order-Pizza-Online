@@ -7,7 +7,6 @@ use App\Pizza;
 class PizzaController extends Controller {
     
     public function index() {
-        //$pizzas = Pizza::all();
         $pizzas = Pizza::orderBy('name')->get();
         return view('pizzas.index',['pizzas' => $pizzas]);
     }
