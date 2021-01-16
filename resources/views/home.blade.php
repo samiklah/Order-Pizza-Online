@@ -13,7 +13,6 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
                     You are logged in!
                     <p><a href="{{url('/pizzas')}}">View All Pizza Orders</a></p>
                 </div>
