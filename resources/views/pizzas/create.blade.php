@@ -6,7 +6,7 @@
     <h1>Create a new pizza</h1>
     
     <br>
-    <form action="{{ route('store') }}" method="post">
+    <form method="POST" action="{{ route('pizza.store') }}" >
         @csrf
         <div class="input-group mb-3">
         <div class="input-group-prepend">
@@ -52,7 +52,7 @@
 
         <fieldset>
             <label for="">Extra toppings</label><br>
-            <input type="checkbox" name="toppings[]" id="" value="extra mashrooms"> Extra Cheese <br>
+            <input type="checkbox" name="toppings[]" id="" value="extra cheese"> Extra Cheese <br>
             <input type="checkbox" name="toppings[]" id="" value="peppers"> Peppers <br>
             <input type="checkbox" name="toppings[]" id="" value="Garlic"> Garlic <br>
             <input type="checkbox" name="toppings[]" id="" value="chilli"> Chilli <br>

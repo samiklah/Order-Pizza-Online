@@ -6,7 +6,7 @@
         @foreach ($pizzas as $pizza)
             <div class="pizza-item">
                 <img src="/images/pizza.png" alt="">
-                <h4><a href="{{url('/pizzas/'.$pizza->id) }}">{{ $pizza->name }}</a></h4>
+                <h4><a href="{{url('/pizzas/'.$pizza->id) }}">{{ $pizza->name }}</a></h4> Orderd on {{ $pizza->created_at }}
             </div>  
         @endforeach
 
