@@ -16,7 +16,7 @@
         @yield('content')
 
         <footer>
-            Copyright <strong>PizzaInn</strong> &copy; <?php echo Date('Y');?>
+            Copyright <strong>Pizza</strong> &copy; <?php echo Date('Y');?>
         </footer>
     </body>
     </html>
